@@ -49,8 +49,8 @@ const ImageSlider = ({ images, title }: Props) => {
 						onClick={goForwards}>
 						<ArrowBigRight aria-hidden/>
 					</button>
-          <div className='flex items-center justify-center absolute bottom-4 left-0.5 translate-y-1/4'>
-            { images.map((_, index) => <button className='bg-transparent text-center text-xs hover:bg-orange-600/30 focus:bg-orange-600/30 rounded-lg' key={index} aria-label={`view image ${index}`} onClick={() => setImageIndex(index)}>{index + 1}</button>)}
+          <div className='flex items-center justify-center absolute bottom-4 translate-y-1/4 w-full'>
+            { images.map((_, index) => <button className='bg-transparent text-center p-3 text-xs m-auto hover:bg-orange-600/30 focus:bg-orange-600/30 rounded-lg' key={index} aria-label={`view image ${index}`} onClick={() => setImageIndex(index)}>{index + 1}</button>)}
           </div>
 				</div>
 			</div>
