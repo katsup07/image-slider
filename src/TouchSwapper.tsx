@@ -12,7 +12,7 @@ const TouchSwapper = ({ images }: Props) => {
 	const getRandomIndex = () => {
 		let randomIndex = generateRandomIndex();
 
-		while (randomIndex < 0 || randomIndex > 19 || randomIndex === imageIndex) 
+		while (randomIndex < 0 || randomIndex > 19) 
       randomIndex = getRandomIndex();
 
 		console.log(randomIndex);
