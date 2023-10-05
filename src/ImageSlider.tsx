@@ -22,12 +22,12 @@ const ImageSlider = ({ images, title }: Props) => {
 	return (
 		<section aria-label="image-slider">
 			<h1 className='mb-2'>{title}</h1>
-			<div className='max-w-screen-xl w-96 mb-0 mt-0 mr-auto ml-auto relative'>
+			<div className='max-w-screen-xl w-72 mb-0 mt-0 mr-auto ml-auto relative'>
 				<div className='flex w-full h-full overflow-hidden '>
 					{images.map(({url, alt}, index) => (
 						<img
 							key={url}
-							className='w-full object-fit h-72 block transition-all duration-500 shrink-0 grow-0'
+							className='w-full object-fit h-60 block transition-all duration-500 shrink-0 grow-0'
 							style={{ translate: `${-100 * imageIndex}%` }}
               aria-hidden={ imageIndex !== index }
 							src={url}
@@ -49,7 +49,7 @@ const ImageSlider = ({ images, title }: Props) => {
 						onClick={goForwards}>
 						<ArrowBigRight aria-hidden/>
 					</button>
-          <div className='flex items-center justify-center absolute bottom-4 left-12 translate-y-1/4'>
+          <div className='flex items-center justify-center absolute bottom-4 left-1 translate-y-1/4'>
             { images.map((_, index) => <button className='bg-transparent text-center text-xs hover:bg-orange-600/30 focus:bg-orange-600/30 rounded-lg' key={index} aria-label={`view image ${index}`} onClick={() => setImageIndex(index)}>{index + 1}</button>)}
           </div>
 				</div>
